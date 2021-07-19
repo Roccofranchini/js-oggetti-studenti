@@ -24,7 +24,7 @@ var userChoiceName = prompt('inserisci il nome');
 var userChoiceSurname = prompt('inserisci il cognome');
 var userChoiceAge = prompt("inserisci l'età");
 
-//creiamo un array 
+//creiamo un array di oggetti
 
 var students = [
     {
@@ -47,6 +47,8 @@ var students = [
     },
 ]
 
+// creiamo l'ogetto nuovostudente con i dati dell'utente e lo pushamo nell'array
+
 var newStudent = {
     name: userChoiceName,
     surname: userChoiceSurname,
@@ -54,6 +56,8 @@ var newStudent = {
 }
 
 students.push(newStudent);
+
+// giriamo con un for all'interno dell'array e con un forin all'interno degli ogetti
 
 var studentsProprieties = '';
 
@@ -74,5 +78,7 @@ for (var i = 0; i < students.length; i++) {
     
     studentsProprieties += studentsProps;
 }
+
+//stampiamo
 
 display.innerHTML = studentsProprieties;
