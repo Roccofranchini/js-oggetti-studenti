@@ -22,7 +22,7 @@ var studentsProps = '';
 
 for (var key in student) {
     var studentProp = (student[key]);
-    studentsProps += '<li>' + studentProp + '</li>';
+    studentsProps += '<li>'+ key + ': ' + studentProp + '</li>';
 }
 
 display.innerHTML = studentsProps;

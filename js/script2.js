@@ -24,6 +24,8 @@ var userChoiceName = prompt('inserisci il nome');
 var userChoiceSurname = prompt('inserisci il cognome');
 var userChoiceAge = prompt("inserisci l'età");
 
+//creiamo un array 
+
 var students = [
     {
         name: 'Leonardo',
@@ -45,6 +47,14 @@ var students = [
     },
 ]
 
+var newStudent = {
+    name: userChoiceName,
+    surname: userChoiceSurname,
+    age: userChoiceAge,
+}
+
+students.push(newStudent);
+
 var studentsProprieties = '';
 
 for (var i = 0; i < students.length; i++) {
@@ -56,7 +66,7 @@ for (var i = 0; i < students.length; i++) {
     for (var key in currentStudent) {
 
         var studentProp = (currentStudent[key]);
-        studentsProps += '<li>' + studentProp + '</li>';
+        studentsProps += '<li>'+ key + ': ' + studentProp + '</li>';
     
         console.table(studentsProps);
 
