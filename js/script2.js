@@ -70,7 +70,7 @@ for (var i = 0; i < students.length; i++) {
     for (var key in currentStudent) {
 
         var studentProp = (currentStudent[key]);
-        studentsProps += '<li>'+ key + ': ' + studentProp + '</li>';
+        studentsProps += '<li>' + studentProp + '</li>';
     
         console.table(studentsProps);
 
