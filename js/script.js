@@ -17,8 +17,24 @@ Iniziate col riflettere sugli step che dovete eseguire, scrivendoli in italiano 
 Facciamo un passo alla volta e verifichiamo i nostri passi col console.log.
 Quando tutto funziona col console.log possiamo preoccuparci di eseguire in pagina!
 
-
-
-
-
 */
+
+
+// ------------------ESERCIZIO 1------------------
+
+
+var display = document.getElementById('display');
+var student = {
+    'name': ['Giuseppe'],
+    'surname': ['Conte'],
+    'age': [22],
+}
+
+var studentsProps = '';
+
+for (var key in student) {
+    var studentProp = (student[key]);
+    studentsProps += '<li>' + studentProp + '</li>';
+}
+
+display.innerHTML = studentsProps;
