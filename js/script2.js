@@ -9,14 +9,60 @@ Facciamo un passo alla volta e verifichiamo i nostri passi col console.log.
 Quando tutto funziona col console.log possiamo preoccuparci di eseguire in pagina!
 
 1- Creare un array di oggetti di studenti con proprietà nome, cognome e eta
-2- 
-
+2- ciclare al suo interno con un for per poi stampare con un for-in le proprietà
+3- raccogliamo i dati del nuovo studente dall'utente
+4- li pushiamo all'interno dell'array
 
 */
 
-var students [
+
+// raccogliamo i dati dall'utente
+
+
+alert('Inserisci i dati del nuovo studente!');
+var userChoiceName = prompt('inserisci il nome');
+var userChoiceSurname = prompt('inserisci il cognome');
+var userChoiceAge = prompt("inserisci l'età");
+
+var students = [
     {
-        name: 'leonardo',
-        
-    }
+        name: 'Leonardo',
+        surname: 'Bonucci',
+        age: [],
+
+    },
+    {
+        name: 'Giorgio',
+        surname: 'Chiellini',
+        age: [],
+
+    },
+    {
+        name: 'Gigi',
+        surname: 'Donnarumma',
+        age: [],
+
+    },
 ]
+
+var studentsProprieties = '';
+
+for (var i = 0; i < students.length; i++) {
+    
+    var currentStudent = students[i];
+    
+    var studentsProps = '';
+
+    for (var key in currentStudent) {
+
+        var studentProp = (currentStudent[key]);
+        studentsProps += '<li>' + studentProp + '</li>';
+    
+        console.table(studentsProps);
+
+    }
+    
+    studentsProprieties += studentsProps;
+}
+
+display.innerHTML = studentsProprieties;
